@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clínica Cuidar+ — Agendamento Online</title>
+  <!-- CSS da Daniela e com alterações de Thiago-->
+
+  <!-- Ícones (opcional para setas/voltar etc.) -->
+  <link rel="stylesheet" href="../css/eslilocadastro.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="shortcut icon" href="../img/icon.png" type="image/x-icon">
+</head>
+
+<body>
+  <div class="container">
+    <!-- Botão de voltar para a Home -->
+    <!-- Cabeçalho da página (feito por Daniela Silva)-->
+    <!--algumas alterações nas tags de titulos de h2 para h3 feito por Thiago-->
+    <header>
+      <a href="index.html" class="btn-voltar">
+        <i class="fa-solid fa-arrow-left"></i> Voltar
+      </a>
+      <h1>Agende sua consulta</h1>
+    </header>
+
+    <!-- Conteúdo Principal (feito por Daniela Silva)/ alteração de nomes do profissional alterado por Cinthia-->
+    <main>
+      <!-- Aqui ajustamos o form para redirecionar -->
+      <form action="confirmacao.html" method="get">
+        <!-- 1 • ESPECIALIDADES / PROFISSIONAL -->
+        <section>
+          <fieldset>
+            <legend>1 • Especialidades / Profissional</legend>
+
+            <label for="especialidade">
+              <h3>Especialidade</h3>
+            </label>
+            <select id="especialidade" name="especialidade" required>
+              <option value="">Selecione...</option>
+              <option value="Cardiologista">Cardiologista</option>
+              <option value="Clínico Geral">Clínico Geral</option>
+              <option value="Dentista">Dentista</option>
+              <option value="Dermatologista">Dermatologista</option>
+              <option value="Ginecologista">Ginecologista</option>
+              <option value="Oftalmologista">Oftalmologista</option>
+              <option value="Otorrinolaringologista">Otorrinolaringologista</option>
+              <option value="Ortopedista">Ortopedista</option>
+              <option value="Pediatria">Pediatria</option> <!-- as ultimas 3 options adicionadas por Thiago. -->
+              <option value="Fisioterapia">Fisioterapia</option>
+              <option value="Neurologista">Neurologista</option>
+            </select>
+
+            <label for="profissional">
+              <h3>Profissional</h3>
+            </label>
+            <select id="profissional" name="profissional">
+              <option value="">Escolha sua Consulta</option>
+              <option value="Andrei Silva (Cardiologista)">
+                Andrei Silva (Cardiologista)
+              </option>
+              <option value="Arnaldo Trindade (Dentista)">
+                Arnaldo Trindade (Dentista)
+              </option>
+              <option value="Daniela Silva (Clínico Geral)">
+                Daniela Silva (Clínico Geral)
+              </option>
+              <option value="Gabriel Ribeiro (Pediatra)">
+                Gabriel Ribeiro (Pediatra)
+              </option>
+              <option value="Carlos Teixeira (Ginecologista)">
+                Carlos Teixeira (Ginecologista)
+              </option>
+              <option value="Cinthia Costa (Fisioterapia)">
+                Cinthia Costa (Fisioterapia)
+              </option>
+              <option value="Hyago Lima (Otorrino)">
+                Hyago Lima (Otorrino)
+              </option>
+              <option value="Jackeline Fioravante (Ortopedista)">
+                Jackeline Fioravante (Ortopedista)
+              </option>
+              <option value="Thiago Ribeiro (Oftalmologista)">
+                Thiago Ribeiro (Oftalmologista)
+              </option>
+              <option value="Victor Assayag (Dermatologista)">
+                Victor Assayag (Dermatologista)
+              </option>
+              <option value="Wellington Ferreira (Neurologista)">
+                Wellington Ferreira (Neurologista)
+              </option>
+            </select>
+          </fieldset>
+        </section>
+        <!-- 2 • DATA E HORÁRIO Conteúdo Principal (feito por Daniela Silva)-->
+
+        <section>
+          <fieldset>
+            <legend>2 • Data e Horário</legend>
+
+            <label for="data">
+              <h3>Data</h3>
+            </label>
+            <input type="date" id="data" name="data" required />
+
+            <h3>Turno</h3>
+            <label><input type="radio" id="manha" name="turno" value="manha" checked />
+              Manhã</label>
+            <label><input type="radio" id="tarde" name="turno" value="tarde" />
+              Tarde</label>
+            <label><input type="radio" id="noite" name="turno" value="noite" />
+              Noite</label>
+            <br><br>
+            <label for="horario">
+              <h3>Horário</h3>
+            </label>
+            <select id="horario" name="horario" required>
+              <option value="">Selecione...</option>
+              <option value="08:00">08:00</option>
+              <option value="13:00">13:00</option>
+              <option value="21:00">21:00</option>
+            </select>
+            <h5 class="nota-turno">
+              Os horários exibidos variam conforme o turno escolhido.
+            </h5>
+          </fieldset>
+        </section>
+
+        <!-- 3 • TIPO DE CONSULTA Conteúdo Principal (feito por Daniela Silva)-->
+        <fieldset>
+          <legend>3 • Tipo de Consulta</legend>
+          <label><input type="radio" id="presencial" name="tipo_consulta" value="presencial" checked />
+            Presencial</label>
+          <label><input type="radio" id="teleconsulta" name="tipo_consulta" value="teleconsulta" />
+            Teleconsulta</label>
+        </fieldset>
+
+        <!-- 4 • INFORMAÇÕES DO PACIENTE Conteúdo Principal (feito por Daniela Silva) alterado por Cinthia radio/ -->
+        <section>
+          <fieldset>
+            <legend>4 • Informações do Paciente</legend>
+
+            <h2>Nome Completo</h2>
+            <div class="row"> <!-- Usando Bootstrap para layout em grid (feito por Thiago)-->
+              <div class="col">
+                <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome"
+                  aria-label="First name">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" id="sobrenome" name="sobrenome" placeholder="Sobrenome"
+                  aria-label="Last name">
+              </div>
+            </div>
+
+            <h2>Documento</h2>
+            <label><input type="radio" id="doc_rg" name="tipo_doc" value="RG" />
+              RG</label>
+            <label><input type="radio" id="doc_cpf" name="tipo_doc" value="CPF" checked />
+              CPF</label>
+            <input type="text" id="numero_rg_cpf" name="numero_rg_cpf" placeholder="RG ou CPF" />
+
+            <label for="documento">
+              <h3>Celular (com o DDD)</h3>
+            </label>
+            <input type="text" id="documento" name="documento" required />
+
+            <label for="email">
+              <h3>Email</h3>
+            </label>
+            <input type="email" id="email" name="email" placeholder="exemplo@.com" required />
+
+            <label for="contato">
+              <h3>Telefone ou WhatsApp</h3>
+            </label>
+            <input type="tel" id="contato" name="contato" required />
+
+            <!-- Endereço ajustado por Arnaldo Trindade, inseriu CEP para busca automática no javascript, inserido placeholder de rua e complemento -->
+            <h2>Endereço</h2>
+
+            <label for="cep">
+              <h3>CEP</h3>
+            </label>
+            <input type="text" id="cep" name="cep" placeholder="00000-000" maxlength="9">
+            <div>
+              <input type="checkbox" id="autoCep" checked>
+              <label for="autoCep">Preencher endereço automaticamente</label>
+            </div>
+
+            <label for="logradouro">
+              <h3>Logradouro</h3>
+            </label>
+            <input type="text" id="logradouro" name="logradouro">
+
+            <label for="numero">
+              <h3>Nº</h3>
+            </label>
+            <input type="text" id="numero" name="numero" placeholder="Digite o Número">
+
+            <label for="complemento">
+              <h3>Complemento</h3>
+            </label>
+            <input type="text" id="complemento" name="complemento" placeholder="Apto, Bloco, Casa, etc">
+
+            <label for="bairro">
+              <h3>Bairro</h3>
+            </label>
+            <input type="text" id="bairro" name="bairro">
+
+            <label for="cidade">
+              <h3>Cidade</h3>
+            </label>
+            <input type="text" id="cidade" name="cidade">
+
+            <label for="uf">
+              <h3>UF</h3>
+            </label>
+            <input type="text" id="uf" name="uf" maxlength="2">
+
+
+            <!--ajustado até aqui-->
+          </fieldset>
+        </section>
+
+        <!-- 5 • CONVÊNIO (feito por Daniela Silva)/ alterado por Cinthia nostra comvenio somente se selecionar sim -->
+        <fieldset id="convenio-bloco">
+          <legend>5 • Convênio</legend>
+
+          <label><input type="radio" id="convenio_sim" name="convenio" value="sim" />
+            Sim</label>
+          <label><input type="radio" id="convenio_nao" name="convenio" value="nao" checked />
+            Não</label>
+
+          <!-- fica oculto por padrão graças ao atributo "hidden" -->
+          <div id="convenio-dados" hidden>
+            <h4>Dados da Carteirinha (se aplicável)</h4>
+
+            <label for="nome_convenio">
+              <h3>Nome do Convênio</h3>
+            </label>
+            <input type="text" id="nome_convenio" name="nome_convenio" disabled />
+
+            <label for="numero_carteirinha">
+              <h3>Número da Carteirinha</h3>
+            </label>
+            <input type="text" id="numero_carteirinha" name="numero_carteirinha" disabled />
+
+            <label for="validade">
+              <h3>Validade</h3>
+            </label>
+            <input type="date" id="validade" name="validade" disabled />
+          </div>
+        </fieldset>
+        <!-- Consentimento -->
+        <section class="confirmation-section">
+          <label>
+            <input type="checkbox" id="confirmacao" required />
+            Autorizo o uso dos meus dados para fins de agendamento e
+            atendimento, conforme a LGPD.
+          </label>
+        </section>
+
+        <button type="submit" class="submit-btn">
+          <i class="fa-solid fa-check"></i> Confirmar Agendamento
+        </button>
+      </form>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Clínica Cuidar+.</p>
+      <!-- Página de agendamento feita por Daniela Silva. -->
+    </footer>
+  </div>
+
+  <!-- máscara javascript (Welligton e Arnaldo) -->
+  <script src="../js/arn.js"></script>
+  
+  <script src="../js/well.js"></script>
+  
+  <script src="../js/cadastro.js"></script>
+  
+  <script src="../js/convenio.js"></script>
+
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+  <!-- VLibras - Acessibilidade em Língua Brasileira de Sinais/ adicionado por wellington -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+</body>
+</html>

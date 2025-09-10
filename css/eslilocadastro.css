@@ -1,0 +1,455 @@
+/* Gabriel fez estilo da ficha de cadastros */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f7f9fc;
+    min-height: 100vh;
+}
+
+/* Container principal */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Cabeçalho */
+header {
+    background: #0ea5e9;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="80" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="70" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="90" cy="30" r="1" fill="rgba(255,255,255,0.1)"/></svg>');
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Conteúdo principal */
+main {
+    padding: 40px 30px;
+}
+
+/* Fieldsets */
+fieldset {
+    margin-bottom: 40px;
+    padding: 30px;
+    background: #eef7ff;
+    border: 2px solid #0ea5e9;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+fieldset:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+fieldset legend {
+    color: #0ea5e9;
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding: 0 15px;
+    background: white;
+    border-radius: 6px;
+}
+
+section h2 {
+    color: #0ea5e9;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+}
+
+section h3 {
+    color: #0ea5e9;
+}
+
+#convenio-dados label h3 {
+    color: #0ea5e9;
+}
+
+section h2::before {
+    width: 8px;
+    height: 8px;
+    background: #0ea5e9;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Labels */
+label {
+    display: block;
+    font-weight: 700;
+    color: #4a5568;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+/* Labels para radio buttons */
+fieldset label {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* Campos de entrada */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: white;
+    font-family: Arial, sans-serif;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #0ea5e9;
+    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+    transform: translateY(-1px);
+}
+
+/* Select customizado */
+select {
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 12px center;
+    background-repeat: no-repeat;
+    background-size: 16px;
+    padding-right: 40px;
+    appearance: none;
+}
+
+/* Textarea */
+textarea {
+    resize: vertical;
+    min-height: 100px;
+    font-family: Arial, sans-serif;
+}
+
+/* Campos obrigatórios */
+input[required]:invalid {
+    border-color: #e53e3e;
+}
+
+label::after {
+    content: " *";
+    color: #e53e3e;
+    font-weight: normal;
+}
+
+/* Remover asterisco dos labels de radio */
+fieldset label::after {
+    content: "";
+}
+
+/* Espaçamento entre campos */
+input,
+select,
+textarea {
+    margin-bottom: 20px;
+}
+
+/* Radio buttons */
+input[type="radio"] {
+    width: auto;
+    margin: 0;
+    margin-right: 8px;
+    accent-color: #0ea5e9;
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+    margin-right: 8px;
+    accent-color: #0ea5e9;
+}
+
+/* Seção de confirmação */
+.confirmation-section {
+    background: #e3f2fd;
+    border-left-color: #0ea5e9;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.confirmation-section label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
+.confirmation-section label::after {
+    content: "";
+}
+
+/* Botão de submit */
+.submit-btn {
+    background: #0ea5e9;
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.submit-btn:hover {
+    background: #0b88c0;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(14, 165, 233, 0.3);
+}
+
+/* Mensagens de ajuda */
+h4 {
+    color: #718096;
+    font-size: 0.9rem;
+    font-weight: 500;
+    font-style: italic;
+    margin: 10px 0;
+    padding: 12px;
+    background: #e3f2fd;
+    border-radius: 6px;
+    border-left: 3px solid #0ea5e9;
+}
+
+h5.nota-turno {
+    color: #718096;
+    font-size: 0.9rem;
+    font-weight: 500;
+    font-style: italic;
+    margin: 10px 0;
+    padding: 12px;
+    background: #e3f2fd;
+    border-radius: 6px;
+    border-left: 3px solid #0ea5e9;
+}
+
+/* Rodapé */
+footer {
+    background: #0ea5e9;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 0.9rem;
+}
+
+/* ESTILO DO BOTÃO DE VOLTAR */
+.btn-voltar {
+    position: absolute;
+    top: -10%;
+    left: 20px;
+    transform: translateY(0%);
+    display: inline-flex;
+    align-items: center;
+    /* Garante alinhamento vertical */
+    gap: 12px;
+    background: #4a5568;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-voltar svg,
+.btn-voltar img,
+.btn-voltar i {
+    vertical-align: middle;
+    display: inline-block;
+    height: 1em;
+    width: 1em;
+}
+
+/* Dados do convênio (inicialmente ocultos) */
+.convenio-dados {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(14, 165, 233, 0.1);
+    border-radius: 8px;
+    border: 1px solid #0ea5e9;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+        border-radius: 10px;
+    }
+
+    header {
+        padding: 30px 15px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    main {
+        padding: 20px 15px;
+    }
+
+    section,
+    fieldset {
+        padding: 20px;
+        margin-bottom: 25px;
+    }
+
+    section h2,
+    fieldset legend {
+        font-size: 1.2rem;
+    }
+
+    fieldset label {
+        display: block;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    section,
+    fieldset {
+        padding: 15px;
+    }
+
+    input,
+    select,
+    textarea {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+
+    .btn-voltar {
+        margin: 8px;
+        left: -10px;
+        top: 8px;
+        padding: 3px 6px;
+        font-size: 0.75rem;
+        gap: 4px;
+        border-radius: 14px;
+    }
+
+    .btn-voltar svg,
+    .btn-voltar img,
+    .btn-voltar i {
+        height: 0.9em;
+        width: 0.9em;
+    }
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section,
+fieldset {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+section:nth-child(1),
+fieldset:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+section:nth-child(2),
+fieldset:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+section:nth-child(3),
+fieldset:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+section:nth-child(4),
+fieldset:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+section:nth-child(5),
+fieldset:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+/* Estados de hover para melhor UX */
+input:hover,
+select:hover,
+textarea:hover {
+    border-color: #cbd5e0;
+    transform: translateY(-1px);
+}
+
+/* Melhorias para acessibilidade */
+:focus-visible {
+    outline: 2px solid #0ea5e9;
+    outline-offset: 2px;
+}

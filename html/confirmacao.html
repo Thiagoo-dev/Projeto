@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Clínica Cuidar+ — Confirmação de Agendamento</title>
+    <!-- feito por Victor Assayag -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="../css/estiloconfimacao.css" />
+    <link rel="shortcut icon" href="../img/icon.png" type="image/x-icon">
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="logo">
+          <i class="fas fa-heartbeat"></i>
+          <span>Clínica Cuidar+</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="success-icon">
+          <i class="fas fa-check"></i>
+        </div>
+
+        <h1>Agendamento Confirmado!</h1>
+        <p>Seu agendamento foi realizado com sucesso!</p>
+
+        <div class="confirmation-message">
+          <i class="fas fa-info-circle"></i> Você receberá um lembrete por
+          WhatsApp ou e-mail 24 horas antes do horário marcado.
+        </div>
+
+        <div class="details">
+          <div class="detail-item">
+            <div class="detail-icon">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="detail-content">
+              <div class="detail-label">PACIENTE</div>
+              <div class="detail-value">
+                <span id="nome-paciente">—</span>
+                <span id="sobrenome-paciente">—</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="detail-item">
+            <div class="detail-icon">
+              <i class="fas fa-stethoscope"></i>
+            </div>
+            <div class="detail-content">
+              <div class="detail-label">SERVIÇO</div>
+              <div class="detail-value">
+                <span id="servico-agendado">—</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="detail-item">
+            <div class="detail-icon">
+              <i class="fas fa-calendar"></i>
+            </div>
+            <div class="detail-content">
+              <div class="detail-label">DATA</div>
+              <div class="detail-value"><span id="data-agendada">—</span></div>
+            </div>
+          </div>
+
+          <div class="detail-item">
+            <div class="detail-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="detail-content">
+              <div class="detail-label">HORÁRIO</div>
+              <div class="detail-value">
+                <span id="horario-agendado">—</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="actions">
+          <a href="#" class="btn btn-primary" id="btn-imprimir">
+            <i class="fas fa-print"></i> Imprimir Comprovante
+          </a>
+          <a href="index.html" class="btn btn-outline" id="btn-home">
+            <i class="fas fa-home"></i> Voltar ao Início
+          </a>
+        </div>
+      </div>
+
+      <footer>
+        <p>&copy; 2025 Clínica Cuidar+. Todos os direitos reservados.</p>
+      </footer>
+    </div>
+    <script src="../js/confimacao.js"></script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+    <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+  </body>
+</html>
