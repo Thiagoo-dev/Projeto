@@ -77,4 +77,16 @@ APÓS CLICAR EM “AGENDAMENTOS”
     • Link ou botão para cancelar ou reagendar
     • Informações sobre prazos e regras
 
-
+8. Grupo
+    • Andrei Silva (Lider)
+    • Arnaldo Trindade (JAVA SCRIPT)
+    • Carlos Gabriel (JAVA SCRIPT)
+    • Cinthia Costa (HTML)
+    • Daniela Silva (HTML)
+    • Jackeline Fioravante (FREMEC)
+    • Gabriel Ribeiro (CSS)
+    • Hyago Lima (CSS)
+    • Thiago Ribeiro (CSS)
+    • Victor Assayag (HTML)
+    • Wellington Ferreira (JAVA SCRIPT)
+    
